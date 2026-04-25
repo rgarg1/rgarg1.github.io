@@ -1,1 +1,365 @@
-Hi! This is Ruchir
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>                                                                                                                                                                                                                                                                                                                 
+      <meta charset="UTF-8">                                                                                                                                                                                                                                                                                             
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                                                                                                                                                                                                             
+      <title>Resume | Ruchir Garg</title>                                                                                                                                                                                                                                                                                  
+      <style>                                                                                                                                                                                                                                                                                                            
+          /* Modern CSS Reset & Variables */                                                                                                                                                                                                                                                                             
+          :root {                                                                                                                                                                                                                                                                                                        
+              --bg-color: #0f172a; /* Deep navy/black */                                                                                                                                                                                                                                                                 
+              --card-bg: #1e293b;                                                                                                                                                                                                                                                                                        
+              --text-main: #f8fafc;
+              --text-muted: #94a3b8;
+              --accent: #38bdf8; /* Bright sky blue */
+              --border: #334155;
+              --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          }
+
+          * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+          }
+
+          body {
+              background-color: var(--bg-color);
+              color: var(--text-main);
+              font-family: var(--font-sans);
+              line-height: 1.6;
+              padding: 40px 20px;
+              display: flex;
+              justify-content: center;
+          }
+
+          .container {
+              max-width: 850px;
+              width: 100%;
+          }
+
+          /* Typography */
+          h1 {
+              font-size: 3rem;
+              letter-spacing: -1px;
+              margin-bottom: 0.5rem;
+          }
+
+          h2 {
+              color: var(--accent);
+              font-size: 1.2rem;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              margin-bottom: 2rem;
+          }
+
+          h3 {
+              font-size: 1.4rem;
+              margin-bottom: 0.5rem;
+          }
+
+          p {
+              color: var(--text-muted);
+              margin-bottom: 1rem;
+          }
+
+          /* Layout Components */
+          header {
+              margin-bottom: 3rem;
+              border-bottom: 1px solid var(--border);
+              padding-bottom: 2rem;
+          }
+
+          .contact-info {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              color: var(--text-muted);
+              font-size: 0.9rem;
+          }
+
+          .contact-info a {
+              color: var    ;
+              text-decoration: none;
+              transition: color 0.3s;
+          }
+
+          .contact-info a:hover {
+              color: var(--accent);
+          }
+
+          section {
+              margin-bottom: 3.5rem;
+          }
+
+          .section-title {
+              display: flex;
+              align-items: center;
+              font-size: 1.5rem;
+              margin-bottom: 1.5rem;
+          }
+
+          .section-title::after {
+              content: "";
+              flex: 1;
+              height: 1px;
+              background: var(--border);
+              margin-left: 20px;
+          }
+
+          /* Experience & Education Timeline */
+          .item {
+              margin-bottom: 2.5rem;
+              display: grid;
+              grid-template-columns: 250px 1fr;
+              gap: 20px;
+          }
+
+          .item-meta {
+              color: var(--text-muted);
+              font-size: 0.9rem;
+              font-family: monospace;
+          }
+
+          .item-content ul {
+              list-style: none;
+          }
+
+          .item-content li {
+              position: relative;
+              padding-left: 20px;
+              margin-bottom: 8px;
+              color: var(--text-muted);
+          }
+
+          .item-content li::before {
+              content: "→";
+              position: absolute;
+              left: 0;
+              color: var(--accent);
+          }
+
+          /* Skills Tags */
+          .skills-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+          }
+
+          .skill-tag {
+              background: var(--card-bg);
+              border: 1px solid var(--border);
+              padding: 6px 14px;
+              border-radius: 4px;
+              font-size: 0.85rem;
+              color: var(--text-main);
+          }
+
+          /* Responsive Design */
+          @media (max-width: 768px) {
+              .item {
+                  grid-template-columns: 1fr;
+              }
+
+              h1 {
+                  font-size: 2.2rem;
+              }
+
+              .item-meta {
+                  margin-bottom: 10px;
+              }
+          }
+
+          @media print {
+              body {
+                  background-color: white;
+                  color: black;
+                  padding: 0;
+              }
+              .skill-tag {
+                  border: 1px solid #ccc;
+                  color: black;
+              }
+              .section-title::after {
+                  background: #ccc;
+              }
+              .item-content li::before {
+                  color: black;
+              }
+              .contact-info a {
+                  color: black;
+              }
+          }
+      </style>
+  </head>
+  <body>
+
+      <div class="container">
+          <!-- HEADER -->
+          <header>
+              <h1>RUCHIR GARG</h1>
+              <h2>Senior Leader - AI Transformation, Software Quality & Security</h2>
+              <div class="contact-info">
+                  <a href="mailto:ruchirg@gmail.com">ruchirg@gmail.com</a>
+                  <a href="https://www.linkedin.com/in/ruchirgarg/">LinkedIn</a>
+                  <a href="+91.98860.16565">Phone: +91.98860.16565</a>
+                  <!-- <a href="#">GitHub</a>
+                  <a href="#">Portfolio</a> -->
+                  <span class="item-meta">📍 Bangalore, IN</span>
+              </div>
+          </header>
+
+          <!-- PROFILE / SUMMARY -->
+          <section>
+              <div class="section-title">Profile</div>
+              <ul>
+                <li>Leader with over 15 years of experience in building and scaling high-performing quality, security, and DevOps organizations across global enterprises including Samsung, Red Hat, and McAfee. </li>
+
+                <li>Deeply proficient in architecting and governing AI/ML systems, standardizing ADLC processes in strict alignment with ISO 42001 and Responsible AI principles.</li>
+
+                <li>Proven driver of operational excellence; pioneered a Quality Engineering BU, slashed customer escalations by 90%, and successfully improved CTQ metrics from 65% to 95%.</li>
+
+                <li>Expert in DevSecOps and cloud-native architectures, with expertise implementing shift-left of the quality practices.</li>
+
+                <li>Leadership & Strategy: Defining quality strategies, building self-managed global teams of SDETs, collaborative problem-solving, cross-functional leadership, software project management, process optimization, tactical and strategic mindset.</li>
+              </ul>
+          </section>
+
+          <!-- EXPERIENCE -->
+          <section>
+              <div class="section-title">Experience</div>
+
+              <!-- Job 1 -->
+              <div class="item">
+                  <div class="item-meta">
+                      June 2024 — Present
+                  </div>
+                  <div class="item-content">
+                      <h3>Group Head @ SAMSUNG</h3>
+                      <p>
+                        Leading multiple teams of DevOps, Process Excellence, Services Quality, Samsung Device solutions, and Agile CoE. 
+                      </p>
+                      <ul>
+                          <li>Leading the standardization of AI Development Life Cycle (ADLC) processes in alignment with ISO 42001, with a strategic emphasis on Responsible AI, Sustainable AI, and MLOps.</li>
+                          <li>We provide DevSecOps expertise to Samsung services, build AI-powered automation frameworks for Samsung Ads, and develop Agile culture in the organization.</li>
+                          <li>Leading multiple teams of DevOps, Process Excellence, Services Quality, Samsung Device solutions, and Agile CoE.</li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!-- Job 2 -->
+              <div class="item">
+                  <div class="item-meta">
+                      Apr 2017 — Jun 2024
+                  </div>
+                  <div class="item-content">
+                      <h3>Manager @ Red Hat</h3>
+                      <p>
+                        Drove customer adoption and delivered a cutting-edge DevSecOps product suite, based on Tekton and ArgoCD, throughout their cloud-native journey. 
+                        Established, groomed, and led multiple teams of expert SDETs to ensure the quality and security of the solution. 
+                      </p>
+                      <ul>
+                          <li>As a leader in quality engineering at Red Hat, delivered high-quality Mobile and Kubernetes powered solutions, optimizing AWS/Azure/GCP resources, and addressing quality risks.</li>
+                          <li>Managed and coached a team of 20+ engineers to operate in a scaled-QE model.</li>
+                          <li>Established metrics-driven quality gates, reducing production defect introduction by 10%.</li>
+                          <li>Implemented quality and security best practices and tools like SCA, SAST, DAST, IaC scanning, and more.</li>
+                          <li>Hired and built multiple teams from scratch. Established foundational quality processes in the product teams</li>
+                          <li>Instilled 'Shift-Left' quality assurance principles across product teams.</li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!-- Job 3 -->
+              <div class="item">
+                  <div class="item-meta">
+                      Jul 2007 — Apr 2017
+                  </div>
+                  <div class="item-content">
+                      <h3>Senior Software Quality Assurance Engineer @ McAfee</h3>
+                      <p>
+                        Leader of Quality, DevOps, Automation, and Security of the McAfee Agent product. 
+                      </p>
+                      <ul>
+                          <li>Led a dynamic team of SDETs to deliver major releases with quality that surpasses all earlier benchmarks. Reduced customer escalations by over 90% (from triple digits to single digits).</li>
+                          <li>Under my leadership, the team jumped three places on a five point scale used to measure product’s maturity w.r.t. software security.</li>
+                          <li>Conducted threat modeling for product architecture using Microsoft Threat Modeling Tool, integrated focused security testing into the Secure Development Lifecycle, and eliminated false positives from static analysis (SAST) reports using component filters.</li>
+                          <li>Analyzed and addressed vulnerabilities reported from the field through Incident Response (PSIRT), authored Security Bulletins and Customer Statements for CVEs, and performed vulnerability scans using NESSUS for HIPAA, PCI-DSS, and privacy analysis (PIA) for GDPR/CCPA compliance.</li>
+                          <li>Transitioned development efforts to SCRUM, accelerating release cycles by 25% and instilling 'Shift-Left' quality assurance across cross-functional teams.</li>
+                          <li>Setup QA practices for the team to follow to ensure that the team runs fast like a startup. McAfee awarded me with the ‘employee of the quarter’ award for my efforts.</li>
+                          <li>Designed & developed a brand new test automation framework using Python to run in the CI environment. This framework superseded all existing frameworks in terms of stability, coverage, and ease of use.</li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!-- Job 4 -->
+              <div class="item">
+                  <div class="item-meta">
+                      Nov 2005 — Jul 2007
+                  </div>
+                  <div class="item-content">
+                      <h3>Senior Software Quality Assurance Tester  @ Tech Mahindra</h3>
+                      <h4>Deputed to MOTOROLA, Bangalore</h4>
+                      <ul>
+                          <li>Developed a high-visibility OBEX application for Motorola that was demonstrated at executive level, achieving an ‘Outstanding’ rating in the annual appraisal due to rapid deployment.</li>
+                          <li>Optimized the  HFP Bluetooth profile test cycle from 2 weeks to 2 days.</li>
+                          <li>Ported Bluetooth car simulator to the newer version of the Widcomm Bluetooth stack, which required complete  C++ code refactoring.</li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!-- Job 5 -->
+              <div class="item">
+                  <div class="item-meta">
+                      Nov 2005 — Jul 2007
+                  </div>
+                  <div class="item-content">
+                      <h3>Senior Project Engineer  @ WIPRO TECHNOLOGIES LTD.</h3>
+                      <h4>Worked for Texas Instruments, Bangalore</h4>
+                      <ul>
+                          <li>Provided worldwide application development (Tier 3) support for Texas Instrument (TI) C6000 series of DSP processors. Improved Critical to Quality (CTQ) metrics from 65% to 95%. Wipro awarded me with a Feather In My Cap (FIMC) award for my achievements.</li>
+                          <li>Tested software interrupts using a novel file based approach and reported inefficiencies in the TI’s compiler optimization logic. Awarded with a Thanks a Zillion (TAZ) award.</li>
+                      </ul>
+                  </div>
+              </div>
+          </section>
+
+          <!-- SKILLS -->
+          <section>
+              <div class="section-title">Skills</div>
+              <div class="skills-container">
+                  <span_tag>Technical</span>
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">API Testing</span>
+                  <span class="skill-tag">DevSecOps</span>
+                  <span class="skill-tag">Security</span>
+                  <span class="skill-tag">Threat Modeling</span>
+                  <span class="skill-tag">Nessus</span>
+                  <br>
+                  <span_tag>Domains</span>
+                  <span class="skill-tag">Ads</span>
+                  <span class="skill-tag">DevOps</span>
+                  <span class="skill-tag">Mobile</span>
+                  <span class="skill-tag">DSP</span>
+                  <span class="skill-tag">Network</span>
+                  <br>
+                  <span_tag>AI</span>
+                  <span class="skill-tag">Deep Learning</span>
+                  <span class="skill-tag">LLM Driven Validation</span>
+                  <span class="skill-tag">Productivity Enhancements</span>
+                  <span class="skill-tag">Agents</span>
+                  <span class="skill-tag">Responsible AI</span>
+              </div>
+          </section>
+
+          <!-- EDUCATION -->
+          <section>
+              <div class="section-title" style="font-weight: bold; margin-bottom: 10px;">Education</div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                  <span>Bachelor of Electrical Engineering</span>
+                  <span style="color: #888;">NAGPUR UNIVERSITY, 2001</span>
+              </div>
+          </section>
+      </div>
+
+  </body>
+  </html>
